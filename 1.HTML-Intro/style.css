@@ -63,4 +63,5 @@ h1, h2, h3 {
 #intro h2 {
     /* style all h2 inside intro */
     font-size: 4rem;
+    font-weight: normal;
 }
