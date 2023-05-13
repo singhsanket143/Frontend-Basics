@@ -65,3 +65,15 @@ h1, h2, h3 {
     font-size: 4rem;
     font-weight: normal;
 }
+
+/* Hire me section */
+#hire {
+    width: 400px; /* This will give the hire section a width, you can see the text will wrap itself*/
+    text-align: center; 
+    margin: 0 auto; /* 2 values in margin makes 0 to be applied on top and bottom and auto says that align the left and right margin automatically, by keeping the current width of div and then give all available space of the parent  */
+    padding: 3rem 0; /* top bottom takes first param and left right as 0 */
+}
+
+#hire p:last-child {
+    margin-top: 3rem; /* give top margin to the last p tag of #hire */
+}
