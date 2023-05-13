@@ -92,5 +92,6 @@ nav ul {
     flex-flow: row wrap; /*Read mdn*/
     justify-content: center; /* applies to the horizontal axis */
     align-items: center; /* applied to vertical axis */
-    gap: 2rem;
+    gap: 2rem; /* new property added, gives equivalent gap between items of flex box */
+    
 }
