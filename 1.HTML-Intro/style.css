@@ -42,3 +42,25 @@ h1, h2, h3 {
     margin: 0;
 }
 
+/* Intro section styling */
+#intro {
+    padding-bottom: 10rem; /* Will give us some spacing before the next section, won't see any change currently */
+}
+
+#intro p {
+    /* styles all paragraphs inside intro */
+    font-size: 1rem; 
+    line-height: 1.5; /*if you will give some unit then this will not be an absolute line height that can change w.r.t zoom in zoom out, try with 5.5px and show*/
+}
+
+.name span {
+    /* style all span inside .name */
+    font-size: 4rem;
+    color: var(--yellow);
+    display: block; /* convert span to block */
+}
+
+#intro h2 {
+    /* style all h2 inside intro */
+    font-size: 4rem;
+}
