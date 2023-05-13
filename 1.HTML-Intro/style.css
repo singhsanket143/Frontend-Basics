@@ -93,5 +93,20 @@ nav ul {
     justify-content: center; /* applies to the horizontal axis */
     align-items: center; /* applied to vertical axis */
     gap: 2rem; /* new property added, gives equivalent gap between items of flex box */
-    
+}
+
+nav li:first-child {
+    flex-basis: 100%; /* to give the first li 100% width of the flex, other items have to go to next line */
+    text-align: center;
+    /* border: 1px solid red; debugger */
+}
+
+nav a {
+    color: white;
+    text-decoration: none; /* makes sure that link doesnt underline */
+    display: block; /* Not necessary, but makes the anchor tag to take more space */
+}
+
+nav a:hover {
+    color: var(--orange);
 }
