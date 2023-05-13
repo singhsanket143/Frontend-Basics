@@ -77,3 +77,20 @@ h1, h2, h3 {
 #hire p:last-child {
     margin-top: 3rem; /* give top margin to the last p tag of #hire */
 }
+
+/* Navbar styling */
+nav {
+    font-size: 80%; /* reduce font size of everything in nav proportinally by 80%*/
+    padding: 1rem; /* Give padding from top left right bottom */
+}
+
+nav ul {
+    list-style-type: none; /* This removes the bullets but doesnt remove the space as it can be given by margin or padding based on browser so give padding and margin 0 */
+    padding: 0; /* this will bring the nav to the left */
+    margin: 0; /* this will bring the nav to the left */
+    display: flex;
+    flex-flow: row wrap; /*Read mdn*/
+    justify-content: center; /* applies to the horizontal axis */
+    align-items: center; /* applied to vertical axis */
+    gap: 2rem;
+}
