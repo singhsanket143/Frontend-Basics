@@ -1,0 +1,44 @@
+/* variables declared here - these are the colors for our pages, as well as the font stacks and sizes. */
+:root {
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/:root */
+    /* Universal selector has no specificity so looses with :root or html selector */
+    /* Psudo elements have less specificty same as html element viz less than pseudo class and class */
+    /* https://teamtreehouse.com/community/what-is-the-difference-between-and-root-functionalities */
+    --lemon: #146152;
+    --kiwi: #44803F;
+    --lime: #B4CF66;
+    --yellow: #FFEC5C;
+    --orange: #FF5A33;
+    --font-size: 1.3rem; /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units */
+
+}
+
+/* border box model: https://css-tricks.com/box-sizing/ */
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--kiwi);
+    color: white;
+}
+/*
+        By default heading have margin of 1em assigned to them
+        em is a relative size, 1em on H1 is bigger from 1em on para
+        We can disable this by doing margin: 0
+*/
+/*
+    Its a good idea to style your links with text decoration along with 
+    color, as some people can be color blind approx 10% people are.
+*/
+h1, h2, h3 {
+    margin: 0;
+}
+
