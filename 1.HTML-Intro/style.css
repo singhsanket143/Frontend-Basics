@@ -48,6 +48,11 @@ h1, h2, h3 {
     background-color: var(--mint);
 }
 
+.gradient-section {
+    height: 2px;
+    background: linear-gradient(90deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+}
+
 /* Intro section styling */
 #intro {
     /*padding-bottom: 10rem;*/ /* Will give us some spacing before the next section, won't see any change currently */
