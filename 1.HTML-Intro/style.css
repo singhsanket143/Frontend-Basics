@@ -44,7 +44,10 @@ h1, h2, h3 {
 
 /* Intro section styling */
 #intro {
-    padding-bottom: 10rem; /* Will give us some spacing before the next section, won't see any change currently */
+    /*padding-bottom: 10rem;*/ /* Will give us some spacing before the next section, won't see any change currently */
+    padding: 4rem 1rem 10rem 1rem; /* T R B L*/
+    max-width: 1200px;
+    margin: 0 auto; /* will center things nicely*/
 }
 
 #intro p {
@@ -121,6 +124,10 @@ nav a:hover {
 .button:hover {
     color: white;
     background-color: var(--lime);
+}
+
+footer {
+    text-align: center;
 }
 
 @media (min-width: 850px) {
