@@ -9,6 +9,7 @@
     --lime: #B4CF66;
     --yellow: #FFEC5C;
     --orange: #FF5A33;
+    --mint: #008F8C;
     --font-size: 1.3rem; /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units */
 
 }
@@ -42,6 +43,11 @@ h1, h2, h3 {
     margin: 0;
 }
 
+/* Colored sections */
+.section-mint {
+    background-color: var(--mint);
+}
+
 /* Intro section styling */
 #intro {
     /*padding-bottom: 10rem;*/ /* Will give us some spacing before the next section, won't see any change currently */
@@ -71,10 +77,11 @@ h1, h2, h3 {
 
 /* Hire me section */
 #hire {
-    width: 400px; /* This will give the hire section a width, you can see the text will wrap itself*/
+    width: 400px; /* This will give the hire section a width, you can see the text will wrap itself*/ /* try removing this and see what happens and why u need outer div*/
     text-align: center; 
     margin: 0 auto; /* 2 values in margin makes 0 to be applied on top and bottom and auto says that align the left and right margin automatically, by keeping the current width of div and then give all available space of the parent  */
     padding: 3rem 0; /* top bottom takes first param and left right as 0 */
+    background-color: var(--mint); /* after putting this style, it will create a box and just color that, to resolve it we need to add a parent div, and this happens as we say it to take 400px width*/
 }
 
 #hire p:last-child {
@@ -119,6 +126,8 @@ nav a:hover {
     background-color: var(--orange);
     padding: 0.5rem;
     border-radius: 5px;
+    text-decoration: none;
+    color: white;
 }
 
 .button:hover {
@@ -128,6 +137,7 @@ nav a:hover {
 
 footer {
     text-align: center;
+    padding: 4rem 0;
 }
 
 @media (min-width: 850px) {
