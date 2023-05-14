@@ -123,3 +123,13 @@ nav a:hover {
     background-color: var(--lime);
 }
 
+@media (min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto; /* will center things nicely*/
+    }
+    nav li:first-child {
+        flex-basis: auto; /* brings back to default flex box settings in wider screen , this takes everything and aligns it to the center, currently extra space is evenly split on left and right */
+        margin-right: auto; /* takes all the space from left and right and add it in between , https://cssreference.io/property/margin-right/*/
+    }
+}
