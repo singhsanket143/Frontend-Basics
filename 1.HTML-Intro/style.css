@@ -10,6 +10,7 @@
     --yellow: #FFEC5C;
     --orange: #FF5A33;
     --mint: #008F8C;
+    --teal: #BDA523;
     --font-size: 1.3rem; /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units */
 
 }
@@ -46,6 +47,10 @@ h1, h2, h3 {
 /* Colored sections */
 .section-mint {
     background-color: var(--mint);
+}
+
+.section-teal {
+    background-color: var(--teal);
 }
 
 .gradient-section {
@@ -143,6 +148,53 @@ nav a:hover {
 footer {
     text-align: center;
     padding: 4rem 0;
+}
+
+/* portfolio section */
+#projects {
+    padding: 4rem 1rem;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+}
+
+#projects h3 {
+    color: var(--lemon);
+}
+
+#projects h4 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.blackbox {
+    background-color: black;
+    padding: 1rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+#projects img {
+    margin: 2rem 0 4rem 0;
+    border-left: 1px solid var(--kiwi);
+    border-top: 1px solid var(--kiwi);
+    border-radius: 25px;
+    padding: 1rem;
 }
 
 @media (min-width: 850px) {
