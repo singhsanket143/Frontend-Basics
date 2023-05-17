@@ -1,0 +1,39 @@
+* {
+    /* This is a universal selector, whatever you write here is applied to everything */
+    
+}
+
+body {
+    background-color: #f3f2ef;
+}
+
+/*header {
+     background-color: white; 
+}*/
+
+/* .mid-text {
+    font-weight: bolder;
+    font-size: medium;
+} */
+
+#head-text {
+    text-decoration-line: underline;
+    text-decoration-style: solid; /* https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-style */
+}
+
+
+/* div span { */
+    /* color:cadetblue; */
+/* } */
+
+/* div > .extra {
+    text-decoration-line: underline;
+} */
+
+/*div + h4 {  https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors */
+    /* color:chocolate; */
+/* } */
+
+div :first-child {
+    color: blue;
+}
