@@ -1,6 +1,7 @@
 * {
     /* This is a universal selector, whatever you write here is applied to everything */
-    
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -36,4 +37,8 @@ body {
 
 div :first-child {
     color: blue;
+}
+
+div, p {
+    padding: 5px;
 }
