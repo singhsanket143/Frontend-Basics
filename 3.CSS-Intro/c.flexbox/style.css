@@ -7,11 +7,61 @@ html {
 }
 
 #parent {
+    /* flex container */
     border: solid red 10px;
+    display: flex;
+    height: 500px;
+    /* flex-direction: row;
+    flex-wrap: nowrap; */
+    flex-flow: row wrap;
+    justify-content: start; /* to arrange elements on main axis */
+    align-items: center; /* to arrange elements on cross axis */
+    align-content: start;/* to arrange elements on cross axis */
+    
 }
 
 #parent div {
+    /* flex items */
     border: solid blue 2px;
     padding: 20px;
     background-color: bisque;
+    min-width: 100px;
+    /* max-width: 200px; */
+    max-height: 100px;
+
+}
+
+#child1 {
+    flex-basis: 100%;
+}
+
+/* #child2 {
+    flex-grow: 1;
+} */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+nav button {
+    margin-left: 10px;
+}
+
+.signin {
+    background-color: rgb(229,9,20);
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 10px;
+    font-weight: bolder;
+}
+
+.signin:hover {
+    background-color: rgb(193,17,25);
 }
