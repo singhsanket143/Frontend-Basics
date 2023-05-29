@@ -56,6 +56,9 @@
     flex-basis: 30%;
     margin-left: 2rem;
     gap: 2rem;
+    align-self: flex-start;
+    position: sticky;
+    top: 10px;
 }
 
 .price-details-box {
