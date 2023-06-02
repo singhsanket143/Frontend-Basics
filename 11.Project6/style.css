@@ -78,3 +78,9 @@ section {
     background-color: #111;
     padding: 20px;
 }
+
+.custom {
+    letter-spacing: 20px;
+    color: red;
+    font-size: 100px;
+}
