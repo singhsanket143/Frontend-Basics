@@ -22,12 +22,12 @@
             <div class="row">
                 <div class="input-section d-flex flex-row justify-content-center">
                     <div class="todo-input">
-                        <input type="text" class="form-control" placeholder="Write another todo ">
+                        <input type="text" id="todo-input-bar" class="form-control" placeholder="Write another todo ..">
                     </div>
-                    <div class="save-todo btn btn-primary">
+                    <div class="save-todo btn btn-primary disabled" id="save-todo">
                         Save
                     </div>
-                    <div class="get-todos btn btn-warning">
+                    <div onclick="clickBtn()" class="get-todos btn btn-warning" id="get-todos">
                         Get Pending Todos
                     </div>
                 </div>
@@ -35,7 +35,7 @@
 
 
             <!-- list of todos -->
-            <div class="todo-data">
+            <div class="todo-data" id="todo-data">
                 <div class="row">
                     <div class="list-todo-heading d-flex flex-row justify-content-between">
                         <div class="todo-no">No.</div>
@@ -46,47 +46,25 @@
                 </div>
                 <hr>
 
+                <div class="todo-data-list" id="todo-data-list">
+
+                </div>
+
                 <!-- actual todos -->
 
-                <div class="row">
+                <!-- <div class="row">
                     <div class="todo-item d-flex flex-row justify-content-between align-items-center">
                         <div class="todo-no">1.</div>
                         <div class="todo-detail text-muted">Complete the action items on todos</div>
                         <div class="todo-status text-muted">In Progress</div>
-                        <div class="todo-actions">
+                        <div class="todo-actions d-flex justify-content-start gap-2">
                             <button class="btn btn-danger">Delete</button>
                             <button class="btn btn-success">Finished</button>
                         </div>
                     </div>
                     <hr>
-                </div>
-
-                <div class="row">
-                    <div class="todo-item d-flex flex-row justify-content-between align-items-center">
-                        <div class="todo-no">1.</div>
-                        <div class="todo-detail text-muted">Complete the action items on todos</div>
-                        <div class="todo-status text-muted">In Progress</div>
-                        <div class="todo-actions">
-                            <button class="btn btn-danger">Delete</button>
-                            <button class="btn btn-success">Finished</button>
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-
-                <div class="row">
-                    <div class="todo-item d-flex flex-row justify-content-between align-items-center">
-                        <div class="todo-no">1.</div>
-                        <div class="todo-detail text-muted">Complete the action items on todos</div>
-                        <div class="todo-status text-muted">In Progress</div>
-                        <div class="todo-actions">
-                            <button class="btn btn-danger">Delete</button>
-                            <button class="btn btn-success">Finished</button>
-                        </div>
-                    </div>
-                    <hr>
-                </div>
-
+                </div> -->
+            
             </div>
            
 
