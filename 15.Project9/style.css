@@ -5,7 +5,10 @@ html {
 *, *::after, *::before {
     box-sizing: inherit;
 }
-
+body {
+    height: 100%;
+    overflow-y: hidden;
+ }
 #ping-pong-table {
     border: 2px solid black;
     height: 400px;
