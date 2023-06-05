@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.addEventListener("mousemove", (event) => {
+        if(event.clientX > table.offsetLeft + (table.offsetWidth/2)) return;
         let mouseDistanceFromTop = event.clientY; // this is the distance of the mouse point from the top of the screen
         let distanceOfTableFromTop = table.offsetTop;
         let mousePointControl = mouseDistanceFromTop - distanceOfTableFromTop - paddle.offsetHeight/2;
