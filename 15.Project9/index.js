@@ -22,9 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // if(ballX > 700-20 || ballX ) dx *= -1;
         // if(ballY > 400-20 || ballY <= 0) dy *<= 0= -1;
+        /**
+         * ballX < paddle.offsetLeft + paddle.offsetWidth -> if left(wrt table) of ball < right(wrt table) of the paddle
+         * ballY > paddle.offsetTop -> if top(wrt table) of ball > top(wrt table) of paddle
+         * ballY + ball.offsetHeight < paddle.offsetTop + paddle.offsetHeight -> 
+         * ballY + ball.offsetHeight -> bottom of the ball
+         * paddle.offsetTop + paddle.offsetHeight -> bottom of the paddle
+         */
         if(ballX < paddle.offsetLeft + paddle.offsetWidth &&
            ballY > paddle.offsetTop &&
-           ballY - ball.offsetHeight < paddle.offsetTop + paddle.offsetHeight
+           ballY + ball.offsetHeight < paddle.offsetTop + paddle.offsetHeight
         ) {
             dx*=-1;
         }
@@ -51,5 +58,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         paddle.style.top = `${paddleY}px`;
     });
+
+    document.addEventListener("mousemove", (event) => {
+        let mouseDistanceFromTop = event.clientY; // this is the distance of the mouse point from the top of the screen
+        let distanceOfTableFromTop = table.offsetTop;
+        let mousePointControl = mouseDistanceFromTop - distanceOfTableFromTop - paddle.offsetHeight/2;
+        paddleY = mousePointControl;
+        if(paddleY <= 0 || paddleY > table.offsetHeight - paddle.offsetHeight) return; // if bottom of the paddle touches bottom of the table return
+        paddle.style.top = `${paddleY}px`;
+    })
 
 });
