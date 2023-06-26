@@ -1,10 +1,12 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
 
     async function fetchProducts() {
         const response = await axios.get("https://fakestoreapi.com/products");
         console.log(response.data);
         return response.data;
     }
+
+    const downloadedProducts = await fetchProducts();
 
     async function populateProducts(flag, customProducts) {
         let products = customProducts;
@@ -52,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const productList = document.getElementById("productList");
         const minPrice = Number(document.getElementById("minPrice").value);
         const maxPrice = Number(document.getElementById("maxPrice").value);
-        const products = await fetchProducts();
+        const products = downloadedProducts;
         filteredProducts = products.filter(product =>  product.price >= minPrice && product.price <= maxPrice);
         productList.innerHTML = "";
         populateProducts(true, filteredProducts);
