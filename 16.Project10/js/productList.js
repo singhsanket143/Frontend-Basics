@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         });
     }
 
-    async function populateCtaegories() {
+    async function populateCategories() {
         const categories = await fetchCategories();
         const categoryList = document.getElementById("categoryList");
         categories.forEach(category => {
@@ -78,8 +78,14 @@ document.addEventListener("DOMContentLoaded", async () => {
         })
     }
 
-    populateProducts(false);
-    populateCtaegories();
+    async function downloadContentAndPopulate () {
+        Promise.all([populateProducts(false), populateCategories()])
+        .then(() => {
+            const loaderBackdrop = document.getElementById("loader-backdrop");
+            loaderBackdrop.style.display = 'none';
+        });
+    }
+    downloadContentAndPopulate();
 
 
     const filterSearch = document.getElementById("search");
