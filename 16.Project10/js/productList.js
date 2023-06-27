@@ -6,12 +6,24 @@ document.addEventListener("DOMContentLoaded", async () => {
         return response.data;
     }
 
+    async function fetchProductsByCategory(category) {
+        const response = await axios.get(`https://fakestoreapi.com/products/category/${category}`);
+        console.log(response.data);
+        return response.data;
+    }
+
     const downloadedProducts = await fetchProducts();
 
     async function populateProducts(flag, customProducts) {
         let products = customProducts;
+        const queryParams = new URLSearchParams(window.location.search);
+        const queryParamsObject = Object.fromEntries(queryParams.entries());
         if(flag == false) {
-            products = await fetchProducts();
+            if(queryParamsObject['category']) {
+                products = await fetchProductsByCategory(queryParamsObject['category']);
+            } else {
+                products = await fetchProducts();
+            }
         }
         
         const productList = document.getElementById("productList");
