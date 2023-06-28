@@ -78,7 +78,7 @@ html {
 }
 
 .loader2 > div {
-    border: 5px solid red; 
+    border: 5px solid var(--jean-blue); 
     width: 5rem;
     height: 5rem;
     border-top: 5px solid #f0eeeb;
